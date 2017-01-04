@@ -145,7 +145,7 @@ int imprint()
 	cout << "auf Basis der bereitgestellten Access-Datei.\n" << endl;
 	cout << "Verein:\t\tZiegenzuchtfreunde Wei\xe1 \be Wolke Bergheim 1979 e.V." << endl;
 	cout << "Entwickler:\tLars Wagner (larswagner@hotmail.de)" << endl;
-	cout << "\nDie Benutzung oder Weitergabe dieser Software ist ohne schriftliche Genehmigung des Entwicklers untersagt!\n" << endl;
+	cout << "\nLizenz: GPL Version 3\n" << endl;
 	
 	system("pause");
 	system("cls");
