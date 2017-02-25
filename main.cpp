@@ -241,7 +241,12 @@ int scan_fail()
 int find_ticket(string &string_to_compare)
 {
 	auto ret = 0;
-	vector<string> v1 = { "12345", "23456", "34567", "1020000081631920000000" };
+	vector<string> v1 = {
+		"105343199102261",
+		"105981211726487",
+		"105195948432983",
+		"105709194103941"
+	};
 
 	for (const auto item : v1){
 		if (item.compare(string_to_compare) == 0)
