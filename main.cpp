@@ -1,8 +1,13 @@
 #include "ui.h"
+#include "database.h"
 
 int main(int argc, const char* argv[])
 {
-	UI user_interface;
+	std::string database_name = "ticket_database";
+	const std::vector<std::string> tables = { "custom", "eventim" };
+	Database database(database_name, tables);
+
+	UI user_interface(database);
 
 	auto state = 0;
 
@@ -23,6 +28,11 @@ int main(int argc, const char* argv[])
 			case 2: // Statistik
 			{
 				state = user_interface.MenuStatistics();
+				break;
+			}
+			case 3: // Datenimport
+			{
+				state = user_interface.MenuImport();
 				break;
 			}
 			case 8: // Impressum

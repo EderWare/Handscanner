@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include <Windows.h>
+#include <time.h>
 
 class Common
 {
@@ -30,6 +30,16 @@ public:
 		std::cin.clear();
 		std::cin.ignore(std::cin.rdbuf()->in_avail());
 		std::getline(std::cin, a_value);
+	}
+
+	static std::string getTimestamp()
+	{
+		time_t result = time(NULL);
+		char timestamp[26];
+
+		ctime_s(timestamp, sizeof timestamp, &result);
+
+		return (std::string(timestamp));
 	}
 };
 

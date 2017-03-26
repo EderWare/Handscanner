@@ -4,17 +4,22 @@
 
 #include <Windows.h>
 
+#include "database.h"
+
 class UI
 {
 public:
-	UI();
+	UI(const Database & database);
 	~UI();
 
 	int MenuMain();
+	int MenuImport();
 	int MenuTicketScan();
 	int MenuStatistics();
 	int MenuImprint();
 	int MenuFail();
+
+	Database database_;
 
 	// Init console preferences:
 	CONSOLE_SCREEN_BUFFER_INFO csbiInfo_;
